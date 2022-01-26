@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Planets/PlanetNeutral.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 451.885, 302.128 )
+
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="PlanetNeutral" parent="Planets" instance=ExtResource( 2 )]
+position = Vector2( 564.255, 304.539 )
+
+[node name="PlanetNeutral2" parent="Planets" instance=ExtResource( 2 )]
+position = Vector2( 580.923, 441.055 )
+
+[node name="PlanetNeutral3" parent="Planets" instance=ExtResource( 2 )]
+position = Vector2( 402.34, 386.29 )
