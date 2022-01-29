@@ -14,7 +14,7 @@ position = Vector2( 451.885, 302.128 )
 position = Vector2( 564.255, 304.539 )
 
 [node name="PlanetNeutral2" parent="Planets" instance=ExtResource( 2 )]
-position = Vector2( 580.923, 441.055 )
+position = Vector2( 348.255, 299.539 )
 
 [node name="PlanetNeutral3" parent="Planets" instance=ExtResource( 2 )]
-position = Vector2( 402.34, 386.29 )
+position = Vector2( 403.255, 242.539 )

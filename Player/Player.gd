@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var Planets = get_tree().get_nodes_in_group("Planets")
+onready var Planets = get_node("../Planets")
 
 enum {
 	MOVE
@@ -8,9 +8,10 @@ enum {
 }
 
 var state = MOVE
-var velocity = Vector2.ZERO
+var velocity = Vector2(0, -100)
 var acceleration = Vector2.ZERO
 var thrust = 100
+var G = 200000
 var has_collided
 
 func _physics_process(delta):
@@ -19,17 +20,23 @@ func _physics_process(delta):
 			move_state(delta)
 
 func move_state(delta):
-	var input_vector = Vector2.ZERO
-	print(Planets)
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
+	for i in range(Planets.get_child_count()):
+		var Planet = Planets.get_child(i)
+		velocity = velocity + acceleration(Planet.get_global_position(), get_global_position())*delta
 
-	if input_vector != Vector2.ZERO:
+	if Input.is_action_pressed("ui_accept"):
 		rotation_degrees = atan2(velocity.x, -velocity.y)*180/PI
-		velocity = velocity + input_vector * thrust * delta
+		velocity = velocity + velocity.normalized() * thrust * delta
+	else:
+		rotation_degrees = atan2(velocity.x, -velocity.y)*180/PI
 
 	has_collided = move_and_collide(velocity * delta)
 	
 	if has_collided:
 		queue_free()
+
+func acceleration(pos1, pos2):
+	var direction = pos1 - pos2
+	var length = direction.length()
+	var normal = direction.normalized()
+	return normal*G/pow(length, 2)
