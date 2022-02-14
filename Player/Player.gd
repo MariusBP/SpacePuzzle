@@ -11,7 +11,8 @@ enum {
 
 var state = LAUNCH
 var velocity = Vector2.ZERO
-var launch_velocity = 100
+var launch_velocity = 0
+var powering_up = true
 var thrust = 100
 var G = 200000
 var has_collided
@@ -31,6 +32,12 @@ func _physics_process(delta):
 func launch_state(_delta):
 	look_at(get_global_mouse_position())
 	set_global_position((anchor_position + Vector2(23, 0).rotated(rotation)))
+	if powering_up:
+		launch_velocity += 1
+		if launch_velocity >= 100:
+			powering_up = false
+	else:
+		launch_velocity -= 1
 	if Input.is_action_pressed("ui_accept"):
 		velocity = launch_velocity*Vector2(1,0).rotated(rotation)
 		state = MOVE
