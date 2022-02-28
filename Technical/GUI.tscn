@@ -1,11 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Technical/GUI.gd" type="Script" id=1]
+[ext_resource path="res://Technical/FuelGauge.gd" type="Script" id=2]
 
 [node name="GUI" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -22,4 +21,18 @@ margin_bottom = 50.0
 margin_right = 400.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 400, 50 )
+max_value = 200.0
 rounded = true
+
+[node name="FuelGauge" type="ProgressBar" parent="VContainer/Bars"]
+visible = false
+margin_left = 404.0
+margin_right = 804.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 400, 50 )
+value = 100.0
+rounded = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
