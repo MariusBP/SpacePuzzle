@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlanetGrey.png-99999e2ff25cd6e768b29f165ed85a76.stex"
+path="res://.import/PlanetGreen.png-e3344b542205144e84aac7b2d2739b96.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Planets/PlanetGrey.png"
-dest_files=[ "res://.import/PlanetGrey.png-99999e2ff25cd6e768b29f165ed85a76.stex" ]
+source_file="res://assets/sprites/PlanetGreen.png"
+dest_files=[ "res://.import/PlanetGreen.png-e3344b542205144e84aac7b2d2739b96.stex" ]
 
 [params]
 

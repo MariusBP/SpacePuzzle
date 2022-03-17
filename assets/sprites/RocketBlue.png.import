@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RocketBlue.png-4ec700e9a3080566ded5891f0c5ce11d.stex"
+path="res://.import/RocketBlue.png-a82f880ae99ad41fa9b9b004945f5431.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/RocketBlue.png"
-dest_files=[ "res://.import/RocketBlue.png-4ec700e9a3080566ded5891f0c5ce11d.stex" ]
+source_file="res://assets/sprites/RocketBlue.png"
+dest_files=[ "res://.import/RocketBlue.png-a82f880ae99ad41fa9b9b004945f5431.stex" ]
 
 [params]
 

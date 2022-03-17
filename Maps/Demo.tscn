@@ -1,28 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Planets/PlanetNeutral.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Planets/PlanetStart.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Technical/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Planets/PlanetGoal.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 451.885, 302.128 )
+position = Vector2( 212.5, 324.177 )
 z_index = 1000
 
 [node name="Planets" type="Node2D" parent="."]
 
 [node name="PlanetStart" parent="Planets" instance=ExtResource( 3 )]
-position = Vector2( 183.255, 324.653 )
+position = Vector2( 427.68, 297.565 )
 
 [node name="PlanetNeutral" parent="Planets" instance=ExtResource( 2 )]
-position = Vector2( 564.255, 304.539 )
+position = Vector2( 775.827, 351.926 )
 
 [node name="PlanetNeutral2" parent="Planets" instance=ExtResource( 2 )]
-position = Vector2( 348.255, 299.539 )
+position = Vector2( 718.673, 301.541 )
 
 [node name="PlanetNeutral3" parent="Planets" instance=ExtResource( 2 )]
-position = Vector2( 403.255, 242.539 )
+position = Vector2( 774.34, 254.553 )
+
+[node name="PlanetGoal" parent="Planets" instance=ExtResource( 5 )]
+position = Vector2( 776.455, 299.952 )
 
 [node name="GUI" parent="." instance=ExtResource( 4 )]

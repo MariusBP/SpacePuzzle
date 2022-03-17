@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RocketRed.png-cfd87c71cc1da3a03f31d67f439cf528.stex"
+path="res://.import/Spaceship.png-faf4fcefa5496858290f2e4796a7d86f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/RocketRed.png"
-dest_files=[ "res://.import/RocketRed.png-cfd87c71cc1da3a03f31d67f439cf528.stex" ]
+source_file="res://assets/sprites/Spaceship.png"
+dest_files=[ "res://.import/Spaceship.png-faf4fcefa5496858290f2e4796a7d86f.stex" ]
 
 [params]
 

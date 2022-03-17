@@ -1,5 +1,7 @@
 extends Node
 
+signal no_fuel
+
 export var max_fuel = 100 setget set_max_fuel
 export onready var fuel = max_fuel setget set_fuel
 
@@ -14,8 +16,6 @@ export var G = 200000
 export var fuel_drain = 50
 var has_collided
 var anchor_position
-
-signal no_fuel
 
 func set_max_fuel(value):
 	max_fuel = max(value, 1)

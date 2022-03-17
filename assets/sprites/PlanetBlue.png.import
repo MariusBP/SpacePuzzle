@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spaceship.png-11fbc2398a521b655fc2303d57a2d976.stex"
+path="res://.import/PlanetBlue.png-621f8d1551b563c7dfe83cf5be9e7be4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Spaceship.png"
-dest_files=[ "res://.import/Spaceship.png-11fbc2398a521b655fc2303d57a2d976.stex" ]
+source_file="res://assets/sprites/PlanetBlue.png"
+dest_files=[ "res://.import/PlanetBlue.png-621f8d1551b563c7dfe83cf5be9e7be4.stex" ]
 
 [params]
 

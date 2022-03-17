@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlanetGreen.png-7fd48f206c9df8c3bb6dd4d58fb0074b.stex"
+path="res://.import/RocketRed.png-bcd2d7eaa260eff8d02ceb87d3abdc36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Planets/PlanetGreen.png"
-dest_files=[ "res://.import/PlanetGreen.png-7fd48f206c9df8c3bb6dd4d58fb0074b.stex" ]
+source_file="res://assets/sprites/RocketRed.png"
+dest_files=[ "res://.import/RocketRed.png-bcd2d7eaa260eff8d02ceb87d3abdc36.stex" ]
 
 [params]
 
