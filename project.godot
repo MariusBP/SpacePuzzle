@@ -8,15 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "LevelTemplate",
+"language": "GDScript",
+"path": "res://levels/LevelTemplate.gd"
+} ]
 _global_script_class_icons={
-
+"LevelTemplate": ""
 }
 
 [application]
 
 config/name="Space Puzzle"
-run/main_scene="res://Maps/Demo.tscn"
+run/main_scene="res://levels/Demo1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
