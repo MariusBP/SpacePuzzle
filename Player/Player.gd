@@ -4,6 +4,7 @@ onready var Planets = get_node("../Planets")
 onready var PlanetStart = get_node("../Planets/PlanetStart")
 onready var LaunchPower = get_node("../GUI/VContainer/Bars/LaunchPower")
 onready var FuelGauge = get_node("../GUI/VContainer/Bars/FuelGauge")
+onready var Timer = get_node("Timer")
 
 enum {
 	LAUNCH
@@ -43,7 +44,8 @@ func launch_state(_delta):
 		Stats.velocity = (LaunchPower.value+Stats.base_launch_power)*Vector2(1,0).rotated(rotation)
 		LaunchPower.visible = false
 		FuelGauge.visible = true
-		state = MOVE
+		state = DRIFTING
+		Timer.start(Stats.boost_pause_on_launch)
 
 func move_state(delta):
 	for i in range(Planets.get_child_count()):
@@ -87,3 +89,8 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_VisibilityNotifier2D_screen_entered():
 	pass
+
+
+func _on_Timer_timeout():
+	#Timer added to avoid instant fuel drain. Prevents boost or brake for "Stats.boost_pause_on_launch" amount of time
+	state = MOVE

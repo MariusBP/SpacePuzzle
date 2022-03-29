@@ -1,7 +1,7 @@
 extends Node2D
 class_name LevelTemplate
 
-const LevelList = preload("res://technical/LevelList.gd")
+const LevelList = preload("res://technical/level_select/LevelList.gd")
 
 onready var PlanetStart = get_node("Planets/PlanetStart")
 onready var GUI = get_node("GUI")

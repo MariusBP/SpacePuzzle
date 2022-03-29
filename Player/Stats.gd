@@ -14,6 +14,7 @@ export(int) var launch_power_delta = launch_power_max/100
 export var thrust = 100
 export var G = 200000
 export var fuel_drain = 50
+export var boost_pause_on_launch = 0.3
 var has_collided
 var anchor_position
 

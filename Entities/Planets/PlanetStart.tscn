@@ -5,7 +5,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.3903
 
-[node name="PlanetStart" type="StaticBody2D"]
+[node name="PlanetStart" type="StaticBody2D" groups=[
+"Planets",
+]]
 
 [node name="PlanetBlue" type="Sprite" parent="."]
 texture = ExtResource( 1 )

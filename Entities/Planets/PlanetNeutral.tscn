@@ -6,7 +6,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.51275
 
-[node name="PlanetNeutral" type="StaticBody2D"]
+[node name="PlanetNeutral" type="StaticBody2D" groups=[
+"Planets",
+]]
 script = ExtResource( 2 )
 
 [node name="PlanetGrey" type="Sprite" parent="."]

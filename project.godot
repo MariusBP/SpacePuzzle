@@ -28,6 +28,10 @@ config/icon="res://icon.png"
 
 Stats="*res://Player/Stats.gd"
 
+[display]
+
+window/size/resizable=false
+
 [importer_defaults]
 
 texture={
