@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://technical/level_select/LevelIcon.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/menu/RedBackground.png" type="Texture" id=2]
 
 [node name="LevelIcon" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 110, 110 )
+margin_right = -914.0
+margin_bottom = -490.0
+rect_min_size = Vector2( 120, 120 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -13,17 +16,19 @@ __meta__ = {
 
 [node name="Number" type="Label" parent="."]
 margin_left = 7.0
-margin_top = 293.0
-margin_right = 1017.0
-margin_bottom = 307.0
+margin_top = 53.0
+margin_right = 113.0
+margin_bottom = 67.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 593.0
+margin_right = 113.0
+margin_bottom = 113.0
 
 [node name="Lock" type="TextureRect" parent="MarginContainer"]
-margin_right = 1010.0
-margin_bottom = 586.0
+margin_right = 106.0
+margin_bottom = 106.0
+texture = ExtResource( 2 )
+stretch_mode = 6
 [connection signal="gui_input" from="." to="." method="_on_LevelIcon_gui_input"]

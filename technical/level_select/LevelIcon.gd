@@ -8,8 +8,6 @@ onready var Lock = $MarginContainer
 var locked = true setget set_locked
 var level_num = 1 setget set_level
 
-
-
 func set_locked(value):
 	locked = value
 	Lock.visible = value
