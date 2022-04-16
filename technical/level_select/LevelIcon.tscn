@@ -3,12 +3,13 @@
 [ext_resource path="res://technical/level_select/LevelIcon.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/menu/RedBackground.png" type="Texture" id=2]
 
-[node name="LevelIcon" type="PanelContainer"]
+[node name="LevelIcon" type="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -914.0
 margin_bottom = -490.0
 rect_min_size = Vector2( 120, 120 )
+mouse_filter = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -31,4 +32,4 @@ margin_right = 106.0
 margin_bottom = 106.0
 texture = ExtResource( 2 )
 stretch_mode = 6
-[connection signal="gui_input" from="." to="." method="_on_LevelIcon_gui_input"]
+[connection signal="pressed" from="." to="." method="_on_LevelIcon_pressed"]

@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Button
 
 signal level_selected
 
@@ -17,9 +17,8 @@ func set_level(value):
 	level_num = value
 	Number.text = str(level_num)
 
-func _on_LevelIcon_gui_input(event):
+func _on_LevelIcon_pressed():
 	if locked:
 		return
-	if event is InputEventMouseButton and event.pressed:
-		print("Clicked Level:", level_num)
-		emit_signal("level_selected", level_num)
+	print("Clicked Level:", level_num)
+	emit_signal("level_selected", level_num)
