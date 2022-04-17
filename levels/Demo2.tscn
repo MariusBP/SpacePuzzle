@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://entities/planets/PlanetNeutral.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=2]
+
+[node name="LevelTemplate" instance=ExtResource( 2 )]
+
+[node name="PlanetGoal" parent="Planets" index="0"]
+position = Vector2( 599.36, 268.761 )
+
+[node name="PlanetNeutral" parent="Planets/PlanetGoal" index="2" instance=ExtResource( 1 )]
+position = Vector2( -100.495, 1.73398 )
+
+[node name="PlanetNeutral2" parent="Planets/PlanetGoal" index="3" instance=ExtResource( 1 )]
+position = Vector2( 18.4256, 138.493 )
+
+[node name="PlanetNeutral" parent="." index="3" instance=ExtResource( 1 )]
+position = Vector2( 427.513, 218.169 )
+
+[node name="PlanetNeutral2" parent="." index="4" instance=ExtResource( 1 )]
+position = Vector2( 546.434, 329.955 )

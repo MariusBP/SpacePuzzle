@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://technical/GUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/LevelTemplate.gd" type="Script" id=2]
+[ext_resource path="res://entities/planets/PlanetGoal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/planets/PlanetStart.tscn" type="PackedScene" id=5]
+
+[node name="LevelTemplate" type="Node2D" groups=[
+"Levels",
+]]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="PlanetGoal" parent="Planets" instance=ExtResource( 3 )]
+position = Vector2( 694.497, 305.626 )
+
+[node name="PlanetStart" parent="Planets" instance=ExtResource( 5 )]
+position = Vector2( 227.139, 328.221 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="GUI" parent="." instance=ExtResource( 1 )]
