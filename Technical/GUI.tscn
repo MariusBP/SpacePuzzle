@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://assets/themes/sci-fi-godot-theme/sci-fi-theme.tres" type="Theme" id=1]
 [ext_resource path="res://Technical/FuelGauge.gd" type="Script" id=2]
 
 [node name="GUI" type="CanvasLayer"]
@@ -8,6 +9,10 @@ layer = 128
 [node name="VContainer" type="VBoxContainer" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Bars" type="HBoxContainer" parent="VContainer"]
 margin_right = 1024.0
