@@ -20,7 +20,6 @@ func _ready():
 	var _no_fuel_error = Stats.connect("no_fuel", self, "_on_no_fuel")
 	Stats.anchor_position = PlanetStart.global_position
 	set_global_position(PlanetStart.global_position)
-	AnimationState.travel("idle")
 
 func _physics_process(delta):
 	match state:
@@ -61,7 +60,7 @@ func move_state(delta):
 		AnimationState.travel("boost")
 		Stats.velocity = Stats.velocity + Stats.velocity.normalized() * Stats.thrust * delta
 		Stats.fuel -= Stats.fuel_drain*delta
-	elif Input.is_action_pressed("break"):
+	elif Input.is_action_pressed("break") and Stats.velocity.length() > 10:
 		AnimationState.travel("idle")
 		Stats.velocity = Stats.velocity - 0.9*Stats.velocity.normalized() * Stats.thrust * delta
 		Stats.fuel -= Stats.fuel_drain*0.9*delta
@@ -71,6 +70,7 @@ func move_state(delta):
 	Stats.has_collided = move_and_collide(Stats.velocity * delta)
 
 func drifting_state(delta):
+	AnimationState.travel("idle")
 	for i in range(Planets.get_child_count()):
 		var Planet = Planets.get_child(i)
 		Stats.velocity = Stats.velocity + acceleration(Planet.get_global_position(), get_global_position())*delta

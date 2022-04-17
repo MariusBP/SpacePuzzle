@@ -103,6 +103,7 @@ anims/idle = SubResource( 3 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 6 )
