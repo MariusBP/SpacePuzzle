@@ -2,11 +2,11 @@ extends Button
 
 signal level_selected
 
-onready var Number = $Number
-onready var Lock = $MarginContainer
+@onready var Number = $Number
+@onready var Lock = $MarginContainer
 
-var locked = true setget set_locked
-var level_num = 1 setget set_level
+var locked = true: set = set_locked
+var level_num = 1: set = set_level
 
 func set_locked(value):
 	locked = value

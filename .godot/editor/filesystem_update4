@@ -1,0 +1,6 @@
+res://default_env.tres
+res://levels/Demo1.tscn
+res://assets/themes/sci-fi-godot-theme/sci-fi-theme.tres
+res://Player/Stats.gd
+res://Entities/Planets/PlanetNeutral.gd
+res://Player/Player.gd

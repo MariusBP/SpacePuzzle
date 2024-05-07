@@ -1,34 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/sci-fi.png-eb3b5f1b6424e8232cd9a843af83d651.stex"
+type="CompressedTexture2D"
+uid="uid://ck3bi3ygjl8on"
+path="res://.godot/imported/sci-fi.png-8ed4049a4594c8f1dc53cc35a236ca87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/themes/sci-fi-godot-theme/sci-fi.png"
-dest_files=[ "res://.import/sci-fi.png-eb3b5f1b6424e8232cd9a843af83d651.stex" ]
+source_file="res://Assets/themes/sci-fi-godot-theme/sci-fi.png"
+dest_files=["res://.godot/imported/sci-fi.png-8ed4049a4594c8f1dc53cc35a236ca87.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

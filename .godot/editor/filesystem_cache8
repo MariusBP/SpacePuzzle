@@ -1,0 +1,56 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715073645
+default_env.tres::Environment::-1::1715073625::0::1::::<><>::
+icon.png::CompressedTexture2D::7647843259454582933::1715073528::1715073646::1::::<><>::
+::res://Assets/::1715073528
+::res://Assets/Sprites/::1715073528
+AsteroidGrey.png::CompressedTexture2D::4768465292265584602::1715073528::1715073646::1::::<><>::
+PlanetBlue.png::CompressedTexture2D::704318361909800888::1715073528::1715073646::1::::<><>::
+PlanetGreen.png::CompressedTexture2D::574767387354690970::1715073528::1715073646::1::::<><>::
+PlanetGrey.png::CompressedTexture2D::2935366914090575828::1715073528::1715073646::1::::<><>::
+RocketBlue.png::CompressedTexture2D::3824498804274857599::1715073528::1715073646::1::::<><>::
+RocketRed.png::CompressedTexture2D::2097113316315541409::1715073528::1715073646::1::::<><>::
+Spaceship.png::CompressedTexture2D::8844599770735663615::1715073528::1715073646::1::::<><>::
+::res://Assets/Sprites/menu/::1715073528
+Blackground.png::CompressedTexture2D::6864717916553337013::1715073528::1715073646::1::::<><>::
+GreenBackground.png::CompressedTexture2D::7716479467191208471::1715073528::1715073646::1::::<><>::
+RedBackground.png::CompressedTexture2D::8596007698805187180::1715073528::1715073646::1::::<><>::
+::res://Assets/themes/::1715073528
+::res://Assets/themes/fonts/::1715073528
+::res://Assets/themes/fonts/pixel_square/::1715073528
+Pixel Square 10.ttf::FontFile::8282937537523156892::1715073528::1715073646::1::::<><>::
+Pixel Square Bold10.ttf::FontFile::3369752287600434673::1715073528::1715073646::1::::<><>::
+pixel_square.tres::FontFile::-1::1715073626::0::1::::<><>::res://assets/themes/fonts/pixel_square/Pixel Square 10.ttf
+::res://Assets/themes/sci-fi-godot-theme/::1715073528
+Pixel Square 10.ttf::FontFile::2968165259472713410::1715073528::1715073646::1::::<><>::
+sci-fi-theme.tres::Theme::-1::1715073626::0::1::::<><>::res://assets/themes/sci-fi-godot-theme/Pixel Square 10.ttf<>res://assets/themes/sci-fi-godot-theme/sci-fi.png
+sci-fi.png::CompressedTexture2D::5532608892238425877::1715073528::1715073646::1::::<><>::
+::res://Enemies/::1715073528
+RocketRed.png::CompressedTexture2D::7970766932805645123::1715073528::1715073646::1::::<><>::
+::res://Entities/::1715073528
+AsteroidGrey.png::CompressedTexture2D::3798783251709081081::1715073528::1715073646::1::::<><>::
+::res://Entities/Planets/::1715073528
+PlanetGoal.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://Assets/Sprites/PlanetGreen.png
+PlanetNeutral.gd::GDScript::-1::1715073625::0::1::::<>StaticBody2D<>::
+PlanetNeutral.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://Assets/Sprites/PlanetGrey.png<>res://Entities/Planets/PlanetNeutral.gd
+PlanetStart.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://Assets/Sprites/PlanetBlue.png
+::res://levels/::1715073528
+Demo1.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://entities/planets/PlanetNeutral.tscn<>res://levels/LevelTemplate.tscn
+Demo2.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://entities/planets/PlanetNeutral.tscn<>res://levels/LevelTemplate.tscn
+LevelTemplate.gd::GDScript::-1::1715073625::0::1::::LevelTemplate<>Node2D<>::
+LevelTemplate.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://technical/GUI.tscn<>res://levels/LevelTemplate.gd<>res://entities/planets/PlanetGoal.tscn<>res://player/Player.tscn<>res://entities/planets/PlanetStart.tscn
+::res://Player/::1715073528
+Player.gd::GDScript::-1::1715073625::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://Assets/Sprites/Spaceship.png<>res://Player/Player.gd
+Stats.gd::GDScript::-1::1715073625::0::1::::<>Node<>::
+Stats.tscn::PackedScene::-1::1715073625::0::1::::<><>::
+::res://Technical/::1715073528
+FuelGauge.gd::GDScript::-1::1715073625::0::1::::<>ProgressBar<>::
+GUI.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://assets/themes/sci-fi-godot-theme/sci-fi-theme.tres<>res://Technical/FuelGauge.gd
+::res://Technical/level_select/::1715073528
+LevelGrid.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://technical/level_select/LevelIcon.tscn
+LevelIcon.gd::GDScript::-1::1715073625::0::1::::<>Button<>::
+LevelIcon.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://technical/level_select/LevelIcon.gd<>res://assets/sprites/menu/RedBackground.png<>res://assets/themes/fonts/pixel_square/Pixel Square Bold10.ttf
+LevelList.gd::GDScript::-1::1715073625::0::1::::<>RefCounted<>::
+LevelMenu.gd::GDScript::-1::1715073625::0::1::::<>MarginContainer<>::
+LevelMenu.tscn::PackedScene::-1::1715073625::0::1::::<><>::res://technical/level_select/LevelGrid.tscn<>res://technical/level_select/LevelMenu.gd<>res://assets/themes/Theme_Sci-fi.tres<>res://assets/themes/sci-fi-godot-theme/sci-fi-theme.tres

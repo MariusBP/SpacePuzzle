@@ -1,23 +1,23 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-onready var Planets = get_node("../Planets")
-onready var PlanetStart = get_node("../Planets/PlanetStart")
-onready var LaunchPower = get_node("../GUI/VContainer/Bars/LaunchPower")
-onready var FuelGauge = get_node("../GUI/VContainer/Bars/FuelGauge")
-onready var Timer = get_node("Timer")
-onready var AnimationState = $AnimationTree.get("parameters/playback")
+@onready var Planets = get_node("../Planets")
+@onready var PlanetStart = get_node("../Planets/PlanetStart")
+@onready var LaunchPower = get_node("../GUI/VContainer/Bars/LaunchPower")
+@onready var FuelGauge = get_node("../GUI/VContainer/Bars/FuelGauge")
+@onready var GenericTimer = get_node("Timer")
+@onready var AnimationState = $AnimationTree.get("parameters/playback")
 
 enum {
-	LAUNCH
-	MOVE
-	DRIFTING
-	LANDED
+	LAUNCH,
+	MOVE,
+	DRIFTING,
+	LANDED,
 }
 
 var state = LAUNCH
 
 func _ready():
-	var _no_fuel_error = Stats.connect("no_fuel", self, "_on_no_fuel")
+	var _no_fuel_error = Stats.connect("no_fuel", Callable(self, "_on_no_fuel"))
 	Stats.anchor_position = PlanetStart.global_position
 	set_global_position(PlanetStart.global_position)
 
@@ -47,7 +47,7 @@ func launch_state(_delta):
 		LaunchPower.visible = false
 		FuelGauge.visible = true
 		state = DRIFTING
-		Timer.start(Stats.boost_pause_on_launch)
+		GenericTimer.start(Stats.boost_pause_on_launch)
 
 func move_state(delta):
 	for i in range(Planets.get_child_count()):

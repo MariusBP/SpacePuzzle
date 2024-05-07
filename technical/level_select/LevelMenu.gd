@@ -4,7 +4,7 @@ var num_levels = 1
 var current_grid = 1
 var grid_width = 710
 
-onready var LevelGrid = find_node("LevelGrid")
+@onready var LevelGrid = find_child("LevelGrid")
 
 func _ready():
 	# Number all the level boxes and unlock them

@@ -3,8 +3,8 @@ class_name LevelTemplate
 
 const LevelList = preload("res://technical/level_select/LevelList.gd")
 
-onready var PlanetStart = get_node("Planets/PlanetStart")
-onready var GUI = get_node("GUI")
+@onready var PlanetStart = get_node("Planets/PlanetStart")
+@onready var GUI = get_node("GUI")
 
 func _ready():
 	if !PlanetStart:
